@@ -11,6 +11,7 @@ public class BallTest {
     @Test
     void gameWinTest() {
         BreakoutGame game = new BreakoutGame();
+        game.run();
         for (int i = 0; i < 101; i++)
             game.destroyBrick();
         assertTrue(game.winGame());

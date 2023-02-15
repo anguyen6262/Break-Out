@@ -3,6 +3,7 @@ package breakout;
 
 import breakout.Screen;
 import edu.macalester.graphics.CanvasWindow;
+import edu.macalester.graphics.GraphicsText;
 
 import java.awt.*;
 
@@ -19,11 +20,12 @@ public class BreakoutGame {
     private breakout.Ball ball;
     private breakout.Screen loseScreen;
     private breakout.Screen winScreen;
-    private int life = 3;
+    private int lives = 3;
     private static int bricksLeft = 2;
 
     private int loseTracker = 0;
     private  int winTracker = 0;
+    private GraphicsText livesDisplay;
 
     /**
      * Lets the user move the paddle with a mouse. Also makes the ball move, checks
@@ -33,6 +35,8 @@ public class BreakoutGame {
     public BreakoutGame() {
         canvas = new CanvasWindow("Breakout!", CANVAS_WIDTH, CANVAS_HEIGHT);
         brickManager = new breakout.BrickManager(canvas);
+        livesDisplay = new GraphicsText("Lives: 3",0,0);
+        canvas.add(livesDisplay);
         canvas.onMouseMove(event -> paddle.setX(event.getPosition().getX()));
         canvas.animate(event -> {
             ball.hitPaddle(canvas, paddle);
@@ -76,8 +80,8 @@ public class BreakoutGame {
         createGrid();
         createBall();
         canvas.animate(() -> {
-            if(life > 0 && loseTracker == 0) {
-                loseLife();
+            if(lives > 0 && loseTracker == 0) {
+                loselives();
             }
                 loseGame();
             if(bricksLeft <= 0 && winTracker == 0){
@@ -109,26 +113,30 @@ public class BreakoutGame {
      * touches the bottom
      * of the canvas 3 times.
      * 
-     * @return true if the life variable becomes 0. The bricksLeft variable needs to
+     * @return true if the lives variable becomes 0. The bricksLeft variable needs to
      *         be manually
      *         changed if the user wants more or less than 3 lives.
      */
 
-    public void loseLife() {
+    public void loselives() {
         if (ball.Reset() && winTracker == 0) {
             ball.removeFromCanvas(canvas);
-            if(life > 0) {
+            if(lives > 0) {
                 createBall();
             }
-            life -= 1;
+            canvas.remove(livesDisplay);
+            livesDisplay = new GraphicsText("Lives: 2",0,0);
+            livesDisplay.setText("Lives: " + lives);
+            canvas.add(livesDisplay);
+            lives -= 1;
         }
     }
 
     public boolean loseGame() {
-        if (life < 1) {
+        if (lives < 1) {
             canvas.removeAll();
             loseScreen = new Screen("You Lose","Play Again",Color.RED);
-            life = 3;
+            lives = 3;
             loseTracker++;
             return true;
         }
@@ -137,6 +145,14 @@ public class BreakoutGame {
 
     public static void destroyBrick() {
         bricksLeft -= 1;
+    }
+
+    public void setLives(int num){
+        lives = num;
+    }
+
+    public int getLives(){
+        return lives;
     }
 
     public static void main(String[] args) {
