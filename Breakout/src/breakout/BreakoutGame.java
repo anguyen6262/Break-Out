@@ -1,7 +1,5 @@
 package breakout;
 
-
-import breakout.Screen;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.GraphicsText;
 
@@ -35,7 +33,7 @@ public class BreakoutGame {
     public BreakoutGame() {
         canvas = new CanvasWindow("Breakout!", CANVAS_WIDTH, CANVAS_HEIGHT);
         brickManager = new breakout.BrickManager(canvas);
-        livesDisplay = new GraphicsText("Lives: 3",0,0);
+        livesDisplay = new GraphicsText("Lives: 3",275,600);
         canvas.add(livesDisplay);
         canvas.onMouseMove(event -> paddle.setX(event.getPosition().getX()));
         canvas.animate(event -> {
@@ -81,7 +79,7 @@ public class BreakoutGame {
         createBall();
         canvas.animate(() -> {
             if(lives > 0 && loseTracker == 0) {
-                loselives();
+                loselife();
             }
                 loseGame();
             if(bricksLeft <= 0 && winTracker == 0){
@@ -118,17 +116,18 @@ public class BreakoutGame {
      *         changed if the user wants more or less than 3 lives.
      */
 
-    public void loselives() {
+    public void loselife() {
         if (ball.Reset() && winTracker == 0) {
             ball.removeFromCanvas(canvas);
             if(lives > 0) {
                 createBall();
             }
-            canvas.remove(livesDisplay);
-            livesDisplay = new GraphicsText("Lives: 2",0,0);
-            livesDisplay.setText("Lives: " + lives);
-            canvas.add(livesDisplay);
             lives -= 1;
+            canvas.remove(livesDisplay);
+            livesDisplay = new GraphicsText("Lives: " + lives, 275, 600);
+            System.out.println(livesDisplay.getText());
+            canvas.add(livesDisplay);
+
         }
     }
 
@@ -153,6 +152,14 @@ public class BreakoutGame {
 
     public int getLives(){
         return lives;
+    }
+
+    public GraphicsText getLivesDisplay(){
+        return livesDisplay;
+    }
+
+    public CanvasWindow getCanvas(){
+        return canvas;
     }
 
     public static void main(String[] args) {

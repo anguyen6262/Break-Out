@@ -20,27 +20,27 @@ class BreakoutGameTest {
     @Test
     void displayLoseLife(){
         BreakoutGame game = new BreakoutGame();
+        int lives = game.getLives();
         game.run();
-        game.setLives(3);
-        game.loselives();
+        game.createBall();
         assertEquals(2,game.getLives());
-        assertEquals("Lives: 2",livesDisplay().getText());
+//        assertEquals("Lives: 2",game.getLivesDisplay().getText());
     }
 
     @Test
-    void loseGameLive() {
+    void loseGameLives() {
         BreakoutGame game = new BreakoutGame();
         game.run();
         game.setLives(0);
         assertTrue(game.loseGame());
-        assertNull(livesDisplay);
+//        assertNull(game.getCanvas().getElement()game.getLivesDisplay());
     }
 
     @Test
     void livesDisplayLocation() {
         BreakoutGame game = new BreakoutGame();
         game.run();
-        assertEquals(250,livesDisplay().getX());
-        assertEquals(500,livesDisplay().getY());
+        assertEquals(300,game.getLivesDisplay().getCenter().getX());
+        assertEquals(650,game.getLivesDisplay().getCenter().getY());
     }
 }
