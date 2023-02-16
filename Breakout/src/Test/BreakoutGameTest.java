@@ -18,13 +18,21 @@ class BreakoutGameTest {
     }
 
     @Test
+    void livesDisplayLocation() {
+        BreakoutGame game = new BreakoutGame();
+        game.run();
+
+        assertEquals(275,game.getLivesDisplay().getX());
+        assertEquals(600,game.getLivesDisplay().getY());
+    }
+
+    @Test
     void displayLoseLife(){
         BreakoutGame game = new BreakoutGame();
-        int lives = game.getLives();
         game.run();
-        game.createBall();
-        assertEquals(2,game.getLives());
-//        assertEquals("Lives: 2",game.getLivesDisplay().getText());
+        assertEquals("Lives: 3",game.getLivesDisplay().getText());
+        game.loselife();
+        assertEquals("Lives: 2",game.getLivesDisplay().getText());
     }
 
     @Test
@@ -33,14 +41,6 @@ class BreakoutGameTest {
         game.run();
         game.setLives(0);
         assertTrue(game.loseGame());
-//        assertNull(game.getCanvas().getElement()game.getLivesDisplay());
-    }
-
-    @Test
-    void livesDisplayLocation() {
-        BreakoutGame game = new BreakoutGame();
-        game.run();
-        assertEquals(300,game.getLivesDisplay().getCenter().getX());
-        assertEquals(650,game.getLivesDisplay().getCenter().getY());
+        assertNull(game.getCanvas().getElementAt(game.getLivesDisplay().getX(),game.getLivesDisplay().getY() ));
     }
 }

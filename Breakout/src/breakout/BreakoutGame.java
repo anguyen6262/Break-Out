@@ -78,13 +78,15 @@ public class BreakoutGame {
         createGrid();
         createBall();
         canvas.animate(() -> {
-            if(lives > 0 && loseTracker == 0) {
+            if(lives < 1  && loseTracker == 0) {
+                loseGame();
+            }
+            if(ball.Reset() && loseTracker == 0 && lives > 0){
                 loselife();
             }
-                loseGame();
             if(bricksLeft <= 0 && winTracker == 0){
-                winGame();
                 ball.removeFromCanvas(canvas);
+                winGame();
             }
         });
     }
@@ -98,12 +100,15 @@ public class BreakoutGame {
      *         changed if the total number of bricks on the canvas is not 100.
      */
     public boolean winGame() {
-        canvas.remove(paddle);
-        winScreen = new Screen("You Win!","Play Again", Color.GREEN);
-        bricksLeft = 2;
-        winTracker++;
-
-        return true;
+        if(bricksLeft == 0) {
+            winTracker++;
+            System.out.println(winTracker);
+            canvas.remove(paddle);
+            winScreen = new Screen("You Win!","Play Again", Color.GREEN);
+            bricksLeft = 2;
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -117,26 +122,23 @@ public class BreakoutGame {
      */
 
     public void loselife() {
-        if (ball.Reset() && winTracker == 0) {
-            ball.removeFromCanvas(canvas);
-            if(lives > 0) {
-                createBall();
-            }
-            lives -= 1;
-            canvas.remove(livesDisplay);
-            livesDisplay = new GraphicsText("Lives: " + lives, 275, 600);
-            System.out.println(livesDisplay.getText());
-            canvas.add(livesDisplay);
-
+        ball.removeFromCanvas(canvas);
+        if(lives > 0) {
+            createBall();
         }
+        lives -= 1;
+        canvas.remove(livesDisplay);
+        livesDisplay = new GraphicsText("Lives: " + lives, 275, 600);
+        System.out.println(livesDisplay.getText());
+        canvas.add(livesDisplay);
     }
 
     public boolean loseGame() {
-        if (lives < 1) {
+        if(lives < 1){
+            loseTracker++;
             canvas.removeAll();
             loseScreen = new Screen("You Lose","Play Again",Color.RED);
             lives = 3;
-            loseTracker++;
             return true;
         }
         return false;
