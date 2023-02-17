@@ -165,8 +165,6 @@ public class Ball {
     /**
      * Returns the total number of bricks left in canvas.
      */
-    public int getBricksLeft() {
-        return bricksLeft;
-    }
+
 
 }

@@ -78,14 +78,13 @@ public class BreakoutGame {
         createGrid();
         createBall();
         canvas.animate(() -> {
-            if(lives < 1  && loseTracker == 0) {
-                loseGame();
-            }
+//            if(lives < 1  && loseTracker == 0) {
+//                loseGame();
+//            }
             if(ball.Reset() && loseTracker == 0 && lives > 0){
                 loselife();
             }
-            if(bricksLeft <= 0 && winTracker == 0){
-                ball.removeFromCanvas(canvas);
+            if(bricksLeft < 1 && winTracker == 0){
                 winGame();
             }
         });
@@ -100,14 +99,18 @@ public class BreakoutGame {
      *         changed if the total number of bricks on the canvas is not 100.
      */
     public boolean winGame() {
+        System.out.println(ball);
+        if(  != null){
+            ball.removeFromCanvas(canvas);
+        }
         if(bricksLeft == 0) {
             winTracker++;
-            System.out.println(winTracker);
             canvas.remove(paddle);
             winScreen = new Screen("You Win!","Play Again", Color.GREEN);
             bricksLeft = 2;
             return true;
         }
+
         return false;
     }
 
