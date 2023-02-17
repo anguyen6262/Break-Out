@@ -21,7 +21,6 @@ class BreakoutGameTest {
     void livesDisplayLocation() {
         BreakoutGame game = new BreakoutGame();
         game.run();
-
         assertEquals(275,game.getLivesDisplay().getX());
         assertEquals(600,game.getLivesDisplay().getY());
     }

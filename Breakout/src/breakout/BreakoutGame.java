@@ -123,15 +123,12 @@ public class BreakoutGame {
      */
 
     public void loselife() {
-//        ball.removeFromCanvas(canvas);
         if(lives > 0) {
             createBall();
-
         }
         lives -= 1;
         canvas.remove(livesDisplay);
         livesDisplay = new GraphicsText("Lives: " + lives, 275, 600);
-        System.out.println(livesDisplay.getText());
         canvas.add(livesDisplay);
     }
 
