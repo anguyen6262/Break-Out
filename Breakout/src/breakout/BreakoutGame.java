@@ -22,7 +22,7 @@ public class BreakoutGame {
     private static int bricksLeft = 2;
 
     private int loseTracker = 0;
-    private  int winTracker = 0;
+    private int winTracker = 0;
     private GraphicsText livesDisplay;
 
     /**
@@ -78,14 +78,15 @@ public class BreakoutGame {
         createGrid();
         createBall();
         canvas.animate(() -> {
-//            if(lives < 1  && loseTracker == 0) {
-//                loseGame();
-//            }
-            if(ball.Reset() && loseTracker == 0 && lives > 0){
+            if(lives < 1  && loseTracker == 0) {
+                loseGame();
+            }
+            if(ball.Reset() && winTracker == 0 && loseTracker == 0){
                 loselife();
             }
-            if(bricksLeft < 1 && winTracker == 0){
+            if(bricksLeft <= 0 && winTracker == 0){
                 winGame();
+//                ball.removeFromCanvas(canvas);
             }
         });
     }
@@ -99,10 +100,7 @@ public class BreakoutGame {
      *         changed if the total number of bricks on the canvas is not 100.
      */
     public boolean winGame() {
-        System.out.println(ball);
-        if(  != null){
-            ball.removeFromCanvas(canvas);
-        }
+        ball.removeFromCanvas(canvas);
         if(bricksLeft == 0) {
             winTracker++;
             canvas.remove(paddle);
@@ -110,7 +108,7 @@ public class BreakoutGame {
             bricksLeft = 2;
             return true;
         }
-
+//
         return false;
     }
 
@@ -125,9 +123,10 @@ public class BreakoutGame {
      */
 
     public void loselife() {
-        ball.removeFromCanvas(canvas);
+//        ball.removeFromCanvas(canvas);
         if(lives > 0) {
             createBall();
+
         }
         lives -= 1;
         canvas.remove(livesDisplay);
