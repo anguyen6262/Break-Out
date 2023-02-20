@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BreakoutGameTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-02-17T01:59:02" hostname="LAPTOP-CLR3Q565" time="0.609">
+<testsuite name="BreakoutGameTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-17T18:07:01" hostname="LAPTOP-CLR3Q565" time="0.446">
   <properties/>
-  <testcase name="loseGame()" classname="BreakoutGameTest" time="0.441"/>
-  <testcase name="livesDisplayLocation()" classname="BreakoutGameTest" time="0.03"/>
-  <testcase name="loseGameLives()" classname="BreakoutGameTest" time="0.09"/>
-  <testcase name="displayLoseLife()" classname="BreakoutGameTest" time="0.041"/>
-  <system-out><![CDATA[Lives: 2
-]]></system-out>
+  <testcase name="displayLoseLife()" classname="BreakoutGameTest" time="0.446"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

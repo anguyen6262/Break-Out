@@ -19,7 +19,7 @@ public class BreakoutGame {
     private breakout.Screen loseScreen;
     private breakout.Screen winScreen;
     private int lives = 3;
-    private static int bricksLeft = 2;
+    private static int bricksLeft;
 
     private int loseTracker = 0;
     private int winTracker = 0;
@@ -77,6 +77,7 @@ public class BreakoutGame {
         createPaddle();
         createGrid();
         createBall();
+        bricksLeft=100;
         canvas.animate(() -> {
             if(lives < 1  && loseTracker == 0) {
                 loseGame();
@@ -105,7 +106,7 @@ public class BreakoutGame {
             winTracker++;
             canvas.remove(paddle);
             winScreen = new Screen("You Win!","Play Again", Color.GREEN);
-            bricksLeft = 2;
+            bricksLeft = 100;
             return true;
         }
 //
