@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import breakout.BreakoutGame;
 import org.junit.jupiter.api.Test;
 import java.beans.Transient;
+import java.awt.Paint;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
@@ -41,5 +42,18 @@ class BreakoutGameTest {
         game.setLives(0);
         assertTrue(game.loseGame());
         assertNull(game.getCanvas().getElementAt(game.getLivesDisplay().getX(),game.getLivesDisplay().getY() ));
+    }
+
+    @Test
+    void ballPaddleColorChangeTest() {
+        BreakoutGame game = new BreakoutGame();
+        game.run();
+        Paint changedBallColor = game.getBall().getColor();
+        System.out.println("Ball color: " + game.getBall().getColor());
+
+        Paint actualBallColor = game.ballHitPaddle();
+        System.out.println("Actual Changed Ball Color: " + actualBallColor);
+
+        assertNotEquals(changedBallColor, actualBallColor);
     }
 }

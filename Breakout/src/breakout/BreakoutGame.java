@@ -144,6 +144,14 @@ public class BreakoutGame {
         return false;
     }
 
+    public Paint ballHitPaddle(){
+        ball.setBallPosition(200,490);
+        ball.hitPaddle(canvas, paddle);
+        return ball.getColor();
+    }
+
+    public breakout.Ball getBall() { return ball;}
+
     public static void destroyBrick() {
         bricksLeft -= 1;
     }

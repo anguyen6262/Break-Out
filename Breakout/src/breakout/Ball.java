@@ -4,6 +4,7 @@ import edu.macalester.graphics.Ellipse;
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.CanvasWindow;
 import java.awt.Color;
+import java.awt.*;
 import java.lang.Math;
 
 /**
@@ -91,12 +92,12 @@ public class Ball {
      * Changes the ball's velocity in the y direction if the ball hits paddle.
      * @return true if the ball hits paddle.
      */
-    public void hitPaddle(CanvasWindow canvas, Paddle paddle){
-        double bottomY = centerY + RADIUS;
-        if (paddle.equals(canvas.getElementAt(ball.getCenter().getX(),bottomY + 0.01))) {
-            velocityY=-velocityY;
-        }
-    }
+//    public void hitPaddle(CanvasWindow canvas, Paddle paddle){
+//        double bottomY = centerY + RADIUS;
+//        if (paddle.equals(canvas.getElementAt(ball.getCenter().getX(),bottomY + 0.01))) {
+//            velocityY=-velocityY;
+//        }
+//    }
 
     /**
      * Changes the ball's velocity in the y direction if the top point or bottom point of the ball hits
@@ -165,6 +166,34 @@ public class Ball {
     /**
      * Returns the total number of bricks left in canvas.
      */
+
+    public boolean hitPaddle(CanvasWindow canvas, breakout.Paddle paddle){
+        double bottomY = centerY + RADIUS;
+        if (paddle.equals(canvas.getElementAt(ball.getCenter().getX(),bottomY + 0.01))) {
+            velocityY=-velocityY;
+            colorChange();
+            System.out.println("ball color changed");
+            return true;
+        }
+        return false;
+    }
+
+    public void colorChange(){
+        if(ball.getFillColor() == Color.black) {
+            ball.setFillColor(Color.red);
+        } else {
+            ball.setFillColor(Color.black);
+        }
+    }
+
+    public Paint getColor(){
+        return ball.getFillColor();
+    }
+
+    public void setBallPosition (double centerX, double centerY) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+    }
 
 
 }
