@@ -29,6 +29,7 @@ public class Screen {
         screen.add(playButton);
         playButton.setCenter(200,150);
         playButton.onClick(()->{
+            screen.closeWindow();
             game = new BreakoutGame();
             game.run();
         });

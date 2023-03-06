@@ -1,12 +1,37 @@
 import static org.junit.jupiter.api.Assertions.*;
+
+import breakout.Ball;
+import breakout.Paddle;
 import breakout.BreakoutGame;
 import org.junit.jupiter.api.Test;
+import edu.macalester.graphics.CanvasWindow;
+import org.mockito.Mockito;
+
 import java.beans.Transient;
 import java.awt.Paint;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.mockito.Mockito.*;
 
 class BreakoutGameTest {
+    BreakoutGame mockGame = mock(BreakoutGame.class);
+    Paddle mockPaddle = mock(Paddle.class);
+    CanvasWindow mockCanvas = mock(CanvasWindow.class);
+
+    @Test
+    void mockitoBall(){
+//        when(mockGame.getCanvas()).thenReturn(mockCanvas);
+//        Ball ball = new breakout.Ball(300, 10, 200, 490, mockGame.getCanvas());
+//        when(ball.hitPaddle(mockGame.getCanvas(),mockPaddle)).thenReturn(true);
+////        Mockito.verify(ball).hitPaddle(mockGame.getCanvas(),mockPaddle);
+//        assertEquals(ball.hitPaddle(mockGame.getCanvas(),mockPaddle),true);
+
+        Ball ball = new breakout.Ball(300, 10, 200, 490, mockCanvas);
+        Paddle paddle = new breakout.Paddle(200.0, 500.01);
+        when(mockCanvas.getElementAt(200.0, 500.01 )).thenReturn(paddle);
+        assertEquals(ball.hitPaddle(mockCanvas,paddle),true);
+
+    }
 
     @Test
     void loseGame() {

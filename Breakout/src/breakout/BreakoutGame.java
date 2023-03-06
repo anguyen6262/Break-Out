@@ -67,7 +67,7 @@ public class BreakoutGame {
      * Constructs a ball at (250, 300).
      */
     public void createBall() {
-        ball = new breakout.Ball(300, 10, 250, 300, canvas);
+        ball = new breakout.Ball(300, 10, 200, 300, canvas);
     }
 
     /**
@@ -139,6 +139,7 @@ public class BreakoutGame {
             canvas.removeAll();
             loseScreen = new Screen("You Lose","Play Again",Color.RED);
             lives = 3;
+            canvas.closeWindow();
             return true;
         }
         return false;

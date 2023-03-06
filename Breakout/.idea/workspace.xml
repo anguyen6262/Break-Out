@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a3493fd-e548-467f-8f5d-eda5a3e4c33e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -15,22 +16,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/BallTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/breakout/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/breakout/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/breakout/BreakoutGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/breakout/BreakoutGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/BallTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/BallTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/breakout/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/breakout/Screen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/BreakoutGameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/BreakoutGameTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BallTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/BallTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BreakoutGameTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BallTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BallTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-BallTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BreakoutGameTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BallTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/BallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/BallTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/BreakoutGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/BreakoutGameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/breakout/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/breakout/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/breakout/BreakoutGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/breakout/BreakoutGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/breakout/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/breakout/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,29 +86,29 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2LT4Iepn4x6bZ8ClWhrUvgBmzM6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/andre/OneDrive/Desktop/Spring2023/COMP394SoftwareTesting/Mockito",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/OneDrive/Desktop/Spring2023/COMP394SoftwareTesting/BreakOut/Breakout&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.BallTest.gameWinTest">
+}</component>
+  <component name="RunManager" selected="Gradle.BreakoutGameTest.mockitoBall">
     <configuration name="BallTest.gameWinTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -125,6 +123,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;BallTest.gameWinTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BreakoutGameTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;BreakoutGameTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +201,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BreakoutGameTest.loseGame" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BreakoutGameTest.mockitoBall" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,30 +214,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;BreakoutGameTest.loseGame&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="BreakoutGameTest.loseGameLives" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;BreakoutGameTest.loseGameLives&quot;" />
+            <option value="&quot;BreakoutGameTest.mockitoBall&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,11 +226,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BreakoutGameTest.mockitoBall" />
+        <item itemvalue="Gradle.BreakoutGameTest" />
         <item itemvalue="Gradle.BallTest.gameWinTest" />
         <item itemvalue="Gradle.BreakoutGameTest.ballPaddleColorChangeTest" />
         <item itemvalue="Gradle.BreakoutGameTest.displayLoseLife" />
-        <item itemvalue="Gradle.BreakoutGameTest.loseGame" />
-        <item itemvalue="Gradle.BreakoutGameTest.loseGameLives" />
       </list>
     </recent_temporary>
   </component>
