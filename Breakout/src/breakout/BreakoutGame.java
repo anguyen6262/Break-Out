@@ -10,7 +10,7 @@ import java.awt.*;
  */
 public class BreakoutGame {
     private static final int CANVAS_WIDTH = 600;
-    private static final int CANVAS_HEIGHT = 800;
+    private static final int CANVAS_HEIGHT = 680;
     private breakout.BrickManager grid;
     private breakout.BrickManager brickManager;
     private CanvasWindow canvas;
